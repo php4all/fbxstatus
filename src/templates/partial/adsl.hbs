@@ -1,0 +1,49 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+	Adsl
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-xs-6 legend">Etat</div>
+			<div class="col-xs-6 value">{{adsl.etat}}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 legend">Protocole</div>
+			<div class="col-xs-6 value">{{adsl.protocole}}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 legend">Mode</div>
+			<div class="col-xs-6 value">{{adsl.mode}}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 legend"></div>
+			<div class="col-xs-3 value">Descendant</div>
+			<div class="col-xs-3 value">Montant</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 legend">Débit ATM</div>
+			<div class="col-xs-3 value">{{adsl.debit.descendant}} kb/s</div>
+			<div class="col-xs-3 value">{{adsl.debit.montant}} kb/s</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 legend">Marge</div>
+			<div class="col-xs-3 value">{{adsl.marge.descendant}} dB</div>
+			<div class="col-xs-3 value">{{adsl.marge.montant}} dB</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 legend">Atténuation</div>
+			<div class="col-xs-3 value">{{adsl.attenuation.descendant}} dB</div>
+			<div class="col-xs-3 value">{{adsl.attenuation.montant}} dB</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 legend">FEC</div>
+			<div class="col-xs-3 value">{{adsl.fec.descendant}}</div>
+			<div class="col-xs-3 value">{{adsl.fec.montant}}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 legend">CRC</div>
+			<div class="col-xs-3 value">{{adsl.crc.descendant}}</div>
+			<div class="col-xs-3 value">{{adsl.crc.montant}}</div>
+		</div>
+	</div>
+</div>

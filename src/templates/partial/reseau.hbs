@@ -1,0 +1,46 @@
+<div class="panel panel-default">
+	<div class="panel-heading">Réseau</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-xs-6 legend">Adresse MAC</div>
+			<div class="col-xs-6 value">{{reseau.mac}}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 legend">Adresse IPv4</div>
+			<div class="col-xs-6 value">{{reseau.ipv4}}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 legend">Adresse IPv6</div>
+			<div class="col-xs-6 value">{{reseau.ipv6}}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 legend">Mode router</div>
+			<div class="col-xs-6 value">{{reseau.router}}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 value"></div>
+			<div class="col-xs-3 value">Débit entrant</div>
+			<div class="col-xs-3 value">Débit sortant</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 legend">WAN</div>
+			<div class="col-xs-3 value">{{reseau.interface.wan.montant}} ko/s</div>
+			<div class="col-xs-3 value">{{reseau.interface.wan.descendant}} ko/s</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 legend">Ethernet</div>
+			<div class="col-xs-3 value">{{reseau.interface.ethernet.montant}} ko/s</div>
+			<div class="col-xs-3 value">{{reseau.interface.ethernet.descendant}} ko/s</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 legend">usb</div>
+			<div class="col-xs-3 value"></div>
+			<div class="col-xs-3 value"></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 legend">Switch</div>
+			<div class="col-xs-3 value">{{reseau.interface.switch.montant}} ko/s</div>
+			<div class="col-xs-3 value">{{reseau.interface.switch.descendant}} ko/s</div>
+		</div>
+	</div>
+</div>

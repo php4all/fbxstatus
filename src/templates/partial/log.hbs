@@ -1,0 +1,34 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+	Log
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-xs-4">Date</div>			
+			<div class="col-xs-4">Status</div>
+
+			<div class="col-xs-2">Descendant</div>
+			<div class="col-xs-2">Montant</div>
+		</div>
+	{{#each adsl.log}}
+		<div class="row">
+			<div class="col-xs-4">
+		{{#if date.date }}
+				{{date.date}} {{date.time}}
+		{{else}}
+				{{date}}
+		{{/if}}
+			</div>
+			<div class="col-xs-4">{{status}}</div>
+		{{#if debit.montant}}
+			<div class="col-xs-2">
+			{{debit.montant}} kb/s
+			</div>
+		{{/if}}
+		{{#if debit.descendant }}
+			{{debit.descendant}} kb/s
+		{{/if}}
+		</div>
+	{{/each}}
+	</div>
+</div>
