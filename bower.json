@@ -1,0 +1,25 @@
+{
+  "name": "fbxstatus",
+  "version": "0.0.1",
+  "homepage": "https://github.com/php4all/fbxstatus",
+  "authors": [
+    "php4all <php4all@free.fr>"
+  ],
+  "description": "Parser du fichier de status de la Freebox V5 (http://mafreebox.free.fr/pub/fbx_info.txt) et reformatage au format JSON et présentation au format HTML",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-toggle": "~2.2.1",
+    "bootstrap": "~3.3.5",
+    "date-format": "*",
+    "DateJS": "datejs#~1.0.0-rc3",
+    "handlebars": "~4.0.4",
+    "jquery": "~2.1.4"
+  }
+}
