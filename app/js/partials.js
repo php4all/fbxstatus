@@ -48,7 +48,7 @@ Handlebars.registerPartial("log", Handlebars.template({"1":function(container,de
     var stack1, helper, alias1=depth0 != null ? depth0 : {};
 
   return "		<div class=\"row\">\n			<div class=\"col-xs-4\">\n"
-    + ((stack1 = helpers["if"].call(alias1,((stack1 = (depth0 != null ? depth0.date : depth0)) != null ? stack1.date : stack1),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.program(4, data, 0),"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.date : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.program(4, data, 0),"data":data})) != null ? stack1 : "")
     + "			</div>\n			<div class=\"col-xs-4\">"
     + container.escapeExpression(((helper = (helper = helpers.status || (depth0 != null ? depth0.status : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"status","hash":{},"data":data}) : helper)))
     + "</div>\n"
@@ -56,12 +56,8 @@ Handlebars.registerPartial("log", Handlebars.template({"1":function(container,de
     + ((stack1 = helpers["if"].call(alias1,((stack1 = (depth0 != null ? depth0.debit : depth0)) != null ? stack1.descendant : stack1),{"name":"if","hash":{},"fn":container.program(8, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "		</div>\n";
 },"2":function(container,depth0,helpers,partials,data) {
-    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
-
-  return "				"
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.date : depth0)) != null ? stack1.date : stack1), depth0))
-    + " "
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.date : depth0)) != null ? stack1.time : stack1), depth0))
+    return "				"
+    + container.escapeExpression((helpers.date || (depth0 && depth0.date) || helpers.helperMissing).call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.date : depth0),"d/m/Y à H:i:s",{"name":"date","hash":{},"data":data}))
     + "\n";
 },"4":function(container,depth0,helpers,partials,data) {
     var helper;

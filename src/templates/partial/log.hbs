@@ -13,8 +13,8 @@
 	{{#each adsl.log}}
 		<div class="row">
 			<div class="col-xs-4">
-		{{#if date.date }}
-				{{date.date}} {{date.time}}
+		{{#if date }}
+				{{date date 'd/m/Y à H:i:s'}}
 		{{else}}
 				{{date}}
 		{{/if}}

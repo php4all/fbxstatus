@@ -80,10 +80,10 @@ $log = [];
 foreach (preg_split("/[\r\n]+/", $subtext) as $line) {
 	$line = trim($line);
 	$date = 'Mise en route';
-	if(preg_match('/^(\d{2}\/\d{2}\/\d{4}) à (\d{2}:\d{2}:\d{2})/', $line, $matches)) {
+	if(preg_match('/^(\d{2}\/\d{2}\/\d{4} à \d{2}:\d{2}:\d{2})/', $line, $matches)) {
 		array_shift($matches);
-		$date = array_combine(array('date', 'time'), $matches);
-		$date['date'] = preg_replace('/(\d{2})\/(\d{2})\/(\d{4})/', '\3-\2-\1', $date['date']);
+		$date = current($matches);
+		$date = \DateTime::createFromFormat('d/m/Y à H:i:s', $date)->getTimestamp() ;
 	}
 
 	preg_match('/(Connexion|Déconnexion)/', $line, $matches);
